@@ -5,7 +5,7 @@ const PORT = 8000;
 
 let db,
   dbConnectionStr =
-    'mongodb+srv://mpfdb:epdg9mzn;@cluster0.rkaig.mongodb.net/athlete?retryWrites=true&w=majority',
+    'mongodb+srv://xxxxx:xxxx@cluster0.rkaig.mongodb.net/athlete?retryWrites=true&w=majority',
   dbName = 'athlete';
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }).then(
