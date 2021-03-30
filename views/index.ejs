@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athlete Table</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/addAthlete" method="POST">
+        <input type="text" placeholder="Full Name" name="name" />
+        <input type="number" placeholder="Identidade" name="cpf" />
+        <input type="date" placeholder="Birth Date" name="date" />
+        <input type="text" placeholder="Gender" name="gender" />
+        <input type="submit" />
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Identidade</th>
+            <th>Data de Nascimento</th>
+            <th>Sexo</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="athelets">
+          <% for(let i=0; i < info.length; i++) {%>
+          <tr class="athlete">
+            <td><%= info[i].name %></td>
+            <td><%= info[i].cpf %></td>
+            <td><%= info[i].date %></td>
+            <td><%= info[i].gender %></td>
+            <td class="del">delete</td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
